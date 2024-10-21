@@ -19,6 +19,6 @@ describe("String Calculator", () => {
   });
 
   test("returns the sum when numbers are separated by commas or newlines", () => {
-    expect(stringCalculator.add("1\n2,3")).toBe(6);
+    expect(add("1\n2,3")).toBe(6);
   });
 });
