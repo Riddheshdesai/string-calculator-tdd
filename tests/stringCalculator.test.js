@@ -13,4 +13,8 @@ describe("String Calculator", () => {
   test("returns the sum of two numbers separated by a comma", () => {
     expect(add("1,2")).toBe(3);
   });
+
+  test("returns the sum of multiple numbers separated by a comma", () => {
+    expect(add("1,2,3,4,5")).toBe(15);
+  });
 });
