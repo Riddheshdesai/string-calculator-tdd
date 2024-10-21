@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import Calculator from "./component/calculator";
 
 function App() {
-
   return (
-    <div>
-      String Calculator
-    </div>
-  )
+    <>
+      <Calculator />
+    </>
+  );
 }
 
-export default App
+export default App;
