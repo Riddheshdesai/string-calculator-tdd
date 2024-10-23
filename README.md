@@ -1,5 +1,7 @@
 # String Calculator
 
+![String Calculator](https://github.com/Riddheshdesai/string-calculator-tdd/blob/develop/src/assets/string-calculator.jpg)
+
 A simple String Calculator built with React and Vite, following Test-Driven Development (TDD) principles. This project implements a string calculator that supports multiple features, including basic arithmetic, custom delimiters, and error handling for negative numbers.
 
 ## Features
