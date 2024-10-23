@@ -1,5 +1,6 @@
 export function add(numbers) {
   let inputString = numbers;
+  let ignoreNumber = 1000;
   if (numbers === "") return 0;
   let delimiter = /[\n,]/;
   if (numbers.startsWith("//")) {
@@ -15,10 +16,15 @@ export function add(numbers) {
   const numberArray = inputString.split(delimiter);
   negetiveNumbers(numberArray);
 
-  return numberArray
-    .filter((number) => number < 1000)
-    .reduce((sum, num) => sum + parseInt(num, 10), 0);
+  return filterNumbers(numberArray, ignoreNumber).reduce(
+    (sum, num) => sum + parseInt(num, 10),
+    0
+  );
 }
+function filterNumbers(numberArray, ignoreNumber) {
+  return numberArray.filter((number) => number < ignoreNumber);
+}
+
 function extractDelimeter(numbers, delimiter, inputString) {
   const parts = numbers.split("\n");
   delimiter = new RegExp(`${parts[0][2]}`);
