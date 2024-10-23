@@ -29,4 +29,8 @@ describe("String Calculator", () => {
   test("throws an exception for negative numbers", () => {
     expect(() => add("1,-2,3")).toThrow("negative numbers not allowed: -2");
   });
+
+  test("Passing the number above or equal to 1000 should ignore for the sum", () => {
+    expect(add("1,2,1000,4,2005")).toBe(7);
+  });
 });
